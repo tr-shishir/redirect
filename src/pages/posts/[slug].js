@@ -147,7 +147,7 @@ export async function getStaticProps({ params = {} } = {}) {
   const { post } = await getPostBySlug(params?.slug);
   return {
     redirect: {
-      destination: `https://www.viraldesifeeds.com/${post.slug}`,
+      destination: `https://www.viraldesifeeds.com${post.slug}`,
       permanent: true, // make this true if you want the redirect to be cached by the search engines and clients forever
     },
   };
