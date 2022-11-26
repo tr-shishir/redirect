@@ -16,7 +16,7 @@
       let urlParams = new URLSearchParams(queryString);
       if( urlParams.has('location') ){
           locationFilter = urlParams.get('location');
-          console.log(locationFilter);
+          window.location.href = "https://www.viraldesifeeds.com/"+locationFilter;
       }
     </script>
   </body>
