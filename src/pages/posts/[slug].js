@@ -21,6 +21,7 @@ import styles from 'styles/pages/Post.module.scss';
 
 export default function Post({ post, socialImage, related }) {
   const {
+    id,
     title,
     metaTitle,
     description,
@@ -127,7 +128,7 @@ export default function Post({ post, socialImage, related }) {
               <ul>
                 {relatedPostsList.map((post) => (
                   <li key={post.title}>
-                    <Link href={postPathBySlug(post.slug)}>
+                    <Link href={postPathBySlug(post.uri)}>
                       <a>{post.title}</a>
                     </Link>
                   </li>
@@ -201,3 +202,4 @@ export async function getStaticPaths() {
     fallback: 'blocking',
   };
 }
+

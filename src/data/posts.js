@@ -10,6 +10,7 @@ export const POST_FIELDS = gql`
           id
           name
           slug
+          uri
         }
       }
     }
@@ -19,6 +20,7 @@ export const POST_FIELDS = gql`
     postId
     slug
     title
+    uri
   }
 `;
 
@@ -52,6 +54,7 @@ export const QUERY_ALL_POSTS_ARCHIVE = gql`
               id
               name
               slug
+              uri
             }
           }
           excerpt
@@ -78,6 +81,9 @@ export const QUERY_ALL_POSTS = gql`
               id
               name
               slug
+              uri
+
+              
             }
           }
           content
@@ -112,6 +118,7 @@ export const QUERY_POST_BY_SLUG = gql`
           id
           name
           slug
+          uri
         }
       }
       id
@@ -143,6 +150,7 @@ export const QUERY_POST_BY_SLUG = gql`
       title
       slug
       isSticky
+      uri
     }
   }
 `;

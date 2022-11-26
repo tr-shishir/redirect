@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://next-wordpress-starter.spacejelly.dev/sitemap.xml
+Sitemap: https://www.viraldesifeeds.com/sitemap.xml

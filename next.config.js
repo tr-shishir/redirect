@@ -40,6 +40,18 @@ module.exports = () => {
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
 };
 
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/posts/:slug',
+        destination: 'https://www.viraldesifeeds.com/:slug', // Matched parameters can be used in the destination
+        permanent: true,
+      },
+    ]
+  },
+}
+
 /**
  * parseEnv
  * @description Helper function to check if a variable is defined and parse booelans
