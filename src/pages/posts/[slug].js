@@ -174,10 +174,6 @@ export async function getStaticProps({ params = {} } = {}) {
   }
   return {
     props,
-    redirect: {
-        permanent: true,
-        destination: `https://www.viraldesifeeds.com/${post.slug}`,
-    },
   };
 }
 
