@@ -1,32 +1,38 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
-        "bookmark-purple": "#5267DF",
-        "bookmark-red": "#DB2877",
-        "bookmark-blue": "#241A45",
-        "bookmark-grey": "#9194A2",
-        "bookmark-white": "#F7F7F7",
-        "bookmark-dark": "#02080C",
-      }
+        'accent-1': '#FAFAFA',
+        'accent-2': '#EAEAEA',
+        'accent-7': '#333',
+        success: '#0070f3',
+        cyan: '#79FFE1',
+      },
+      spacing: {
+        28: '7rem',
+      },
+      letterSpacing: {
+        tighter: '-.04em',
+      },
+      lineHeight: {
+        tight: 1.2,
+      },
+      fontSize: {
+        '5xl': '2.5rem',
+        '6xl': '2.75rem',
+        '7xl': '4.5rem',
+        '8xl': '6.25rem',
+      },
+      boxShadow: {
+        small: '0 5px 10px rgba(0, 0, 0, 0.12)',
+        medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
+      },
     },
-    fontFamily: {
-      Poppins: ['Poppins, sans-serif'],
-    },
-    container: {
-      center: true,
-      padding: "1rem",
-      screens: {
-        lg: "1124px",
-        xl: "1124px",
-        "2xl": "1124px"
-      }
-    }
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
