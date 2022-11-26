@@ -21,7 +21,6 @@ import styles from 'styles/pages/Post.module.scss';
 
 export default function Post({ post, socialImage, related }) {
   const {
-    id,
     title,
     metaTitle,
     description,
@@ -202,4 +201,3 @@ export async function getStaticPaths() {
     fallback: 'blocking',
   };
 }
-

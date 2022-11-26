@@ -82,8 +82,6 @@ export const QUERY_ALL_POSTS = gql`
               name
               slug
               uri
-
-              
             }
           }
           content
