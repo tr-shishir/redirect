@@ -10,5 +10,14 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+
+      let queryString = window.location.search;
+      let urlParams = new URLSearchParams(queryString);
+      if( urlParams.has('location') ){
+          locationFilter = urlParams.get('location');
+          console.log(locationFilter);
+      }
+    </script>
   </body>
 </html>
