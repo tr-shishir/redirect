@@ -20,7 +20,9 @@ import FeaturedImage from 'components/FeaturedImage';
 import styles from 'styles/pages/Post.module.scss';
 
 export default function Post({ post, socialImage, related }) {
+
   const {
+    id,
     title,
     metaTitle,
     description,
@@ -143,6 +145,12 @@ export default function Post({ post, socialImage, related }) {
 
 export async function getStaticProps({ params = {} } = {}) {
   const { post } = await getPostBySlug(params?.slug);
+  return {
+    redirect: {
+      destination: `https://www.viraldesifeeds.com/${post.slug}`,
+      permanent: true, // make this true if you want the redirect to be cached by the search engines and clients forever
+    },
+  };
 
   if (!post) {
     return {
@@ -201,3 +209,4 @@ export async function getStaticPaths() {
     fallback: 'blocking',
   };
 }
+
