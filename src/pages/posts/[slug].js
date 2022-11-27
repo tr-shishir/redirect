@@ -31,6 +31,7 @@ export default function Post({ post, socialImage, related }) {
     modified,
     featuredImage,
     isSticky = false,
+    uri,
   } = post;
 
   const { metadata: siteMetadata = {}, homepage } = useSite();
@@ -54,6 +55,7 @@ export default function Post({ post, socialImage, related }) {
 
   if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
     metadata.title = `${title} - ${siteMetadata.title}`;
+    metadata.slug = `${post.uri}`;
     metadata.og.title = metadata.title;
     metadata.twitter.title = metadata.title;
   }
@@ -69,6 +71,9 @@ export default function Post({ post, socialImage, related }) {
   return (
     <Layout>
       <Helmet {...helmetSettings} />
+      <Helmet>
+        <meta http-equiv="refresh" content='0; url: https://www.viraldesifeeds.com{post.uri}' />
+      </Helmet>
 
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
 
